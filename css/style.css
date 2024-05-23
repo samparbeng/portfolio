@@ -5,56 +5,53 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
 h1 {
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
-a {
-    display: block;
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.portfolio-item-detail {
-    max-width: 600px;
-    margin: 20px auto;
+form {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 4px;
     padding: 20px;
+    border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio-item-detail h1 {
-    margin-top: 0;
-}
-
-.portfolio-item-detail img {
-    max-width: 100%;
-    height: auto;
+form label {
     display: block;
-    margin: 20px 0;
+    margin-bottom: 10px;
 }
 
-.portfolio-item-detail p {
-    margin: 10px 0;
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-.portfolio-item-detail .created-at {
-    font-size: 0.9em;
-    color: #777;
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
 }
 
 .error {
