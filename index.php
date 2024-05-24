@@ -29,22 +29,33 @@ $conn->close();
     <meta charset="UTF-8">
     <title>My Portfolio Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
-    <h1>My Portfolio Dashboard</h1>
-    <div class="portfolio-grid">
-        <?php if (!empty($portfolioItems)): ?>
-            <?php foreach ($portfolioItems as $item): ?>
-                <div class="portfolio-item">
-                    <a href="portfolio-item.php?id=<?php echo htmlspecialchars($item['id']); ?>">
-                        <img src="uploads/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
-                        <h2><?php echo htmlspecialchars($item['title']); ?></h2>
-                    </a>
-                </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>No portfolio items found.</p>
-        <?php endif; ?>
+    <div class="container">
+        <div class="toggle-button" onclick="toggleSidebar()">☰ Menu</div>
+        <?php include 'sidebar.php'; ?>
+        <div class="main-content">
+            <h1>My Portfolio Dashboard</h1>
+            <div class="portfolio-grid">
+                <?php if (!empty($portfolioItems)): ?>
+                    <?php foreach ($portfolioItems as $item): ?>
+                        <div class="portfolio-item">
+                            <a href="portfolio-item.php?id=<?php echo htmlspecialchars($item['id']); ?>">
+                                <img src="uploads/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                                <h2><?php echo htmlspecialchars($item['title']); ?></h2>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No portfolio items found.</p>
+                <?php endif; ?>
+            </div>
+        </div>
     </div>
 </body>
 </html>
