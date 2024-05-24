@@ -27,9 +27,30 @@ $conn->close();
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <title>My Portfolio Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="theme-color" content="#3e454c">
+<title>Project Dashboard</title>
+<!-- Font awesome -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Sandstone Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Bootstrap Datatables -->
+<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+<!-- Bootstrap social button library -->
+<link rel="stylesheet" href="css/bootstrap-social.css">
+<!-- Bootstrap select -->
+<link rel="stylesheet" href="css/bootstrap-select.css">
+<!-- Bootstrap file input -->
+<link rel="stylesheet" href="css/fileinput.min.css">
+<!-- Awesome Bootstrap checkbox -->
+<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+<!-- Admin Stye -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/majorco.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('show');
@@ -37,14 +58,7 @@ $conn->close();
     </script>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="social-links">
-            <a href="https://github.com/yourprofile" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-        </div>
-    </div>
+    <?php include('includes/header.php');?>
     <div class="container">
         <div class="toggle-button" onclick="toggleSidebar()">☰ Menu</div>
         <?php include 'sidebar.php'; ?>
