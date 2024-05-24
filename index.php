@@ -26,9 +26,10 @@ $conn->close();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <title>My Portfolio Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('show');
@@ -36,6 +37,14 @@ $conn->close();
     </script>
 </head>
 <body>
+    <div class="top-bar">
+        <div class="social-links">
+            <a href="https://github.com/yourprofile" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
     <div class="container">
         <div class="toggle-button" onclick="toggleSidebar()">☰ Menu</div>
         <?php include 'sidebar.php'; ?>
