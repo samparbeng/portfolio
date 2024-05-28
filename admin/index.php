@@ -12,10 +12,11 @@ if (!isAuthenticated()) {
 <head>
     <meta charset="UTF-8">
     <title>Admin - Add Portfolio Item</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Add New Portfolio Item</h1>
+    <div>
+    <h2>Add New Portfolio Item</h2>
     <form action="add.php" method="post" enctype="multipart/form-data">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required>
@@ -29,5 +30,6 @@ if (!isAuthenticated()) {
         <button type="submit">Add Item</button>
     </form>
     <a href="logout.php">Logout</a>
+</div>
 </body>
 </html>
