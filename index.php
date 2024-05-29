@@ -4,7 +4,7 @@ include 'includes/error_handling.php';
 
 $portfolioItems = [];
 
-if ($stmt = $conn->prepare('SELECT id, title, image FROM portfolio_items ORDER BY created_at DESC')) {
+if ($stmt = $conn->prepare('SELECT id, title, image, back_image FROM portfolio_items ORDER BY created_at DESC')) {
     if ($stmt->execute()) {
         $result = $stmt->get_result();
         while ($row = $result->fetch_assoc()) {
@@ -156,32 +156,34 @@ $conn->close();
             <section class="section portfolio" id="portfolio">
                 <div class="container">
                     <p class="section-subtitle">Portfolio</p>
-                    <h2 class="h2 section-title">My Amazing Works</h2>
-                    <p class="section-text">Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit
-                        in voluptate</p>
-                    <ul class="portfolio-list">
+                     <h2 class="h2 section-title">My Amazing Works</h2>
+                        <p class="section-text">Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate</p>
+                        <ul class="portfolio-list">
                         <?php if (!empty($portfolioItems)): ?>
                         <?php foreach ($portfolioItems as $item): ?>
                         <li>
-                            <a href="portfolio-item.php?id=<?php echo htmlspecialchars($item['id']); ?>"
-                                class="portfolio-card"
-                                style="background-image: url('uploads/<?php echo htmlspecialchars($item['image']); ?>')">
-                                <div class="card-content">
-                                    <h3 class="h3 card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
-                                    <span class="btn-link">
-                                        <span>View Project</span>
-                                        <ion-icon name="arrow-forward"></ion-icon>
-                                    </span>
+                            <a href="portfolio-item.php?id=<?php echo htmlspecialchars($item['id']); ?>" class="portfolio-card"
+                           style="background-image: url('uploads/<?php echo htmlspecialchars($item['back_image']); ?>');">
+                            <div class="card-content">
+                                <div class="main-image-container">
+                                    <img src="uploads/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="main-image">
                                 </div>
+                                <h3 class="h3 card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
+                                <span class="btn-link">
+                                    <span>View Project</span>
+                                    <ion-icon name="arrow-forward"></ion-icon>
+                                </span>
+                            </div>
                             </a>
                         </li>
-                        <?php endforeach; ?>
-                        <?php else: ?>
-                        <p>No portfolio items found.</p>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-            </section>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No portfolio items found.</p>
+            <?php endif; ?>
+        </ul>
+    </div>
+</section>
+
 
             <section class="section skills" id="skills">
                 <div class="container">

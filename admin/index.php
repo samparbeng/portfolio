@@ -21,16 +21,12 @@ if (!isAuthenticated()) {
     <form action="add.php" method="post" enctype="multipart/form-data">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title" required>
-    
         <label for="description">Description:</label>
         <textarea name="description" id="description" required></textarea>
-    
         <label for="image">Main Image:</label>
         <input type="file" name="image" id="image" required>
-    
         <label for="back_image">Background Image:</label>
         <input type="file" name="back_image" id="back_image" required>
-    
         <button type="submit">Submit</button>
     </form>
     <a href="logout.php">Logout</a>
