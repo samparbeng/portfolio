@@ -1,5 +1,5 @@
-<?php
 // admin/add.php
+<?php
 include '../config.php';
 include '../includes/error_handling.php';
 
@@ -11,11 +11,17 @@ if (!isAuthenticated()) {
 $title = $_POST['title'];
 $description = $_POST['description'];
 $image = $_FILES['image']['name'];
-$target = "../uploads/" . basename($image);
+$backImage = $_FILES['back_image']['name'];
 
-if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-    if ($stmt = $conn->prepare('INSERT INTO portfolio_items (title, description, image) VALUES (?, ?, ?)')) {
-        $stmt->bind_param('sss', $title, $description, $image);
+$targetImage = "../uploads/" . basename($image);
+$targetBackImage = "../uploads/" . basename($backImage);
+
+$imageUploaded = move_uploaded_file($_FILES['image']['tmp_name'], $targetImage);
+$backImageUploaded = move_uploaded_file($_FILES['back_image']['tmp_name'], $targetBackImage);
+
+if ($imageUploaded && $backImageUploaded) {
+    if ($stmt = $conn->prepare('INSERT INTO portfolio_items (title, description, image, back_image) VALUES (?, ?, ?, ?)')) {
+        $stmt->bind_param('ssss', $title, $description, $image, $backImage);
         
         if ($stmt->execute()) {
             echo "New record created successfully";
@@ -32,13 +38,14 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
         displayError("An error occurred. Please try again later.");
     }
 } else {
-    $error_message = "Failed to upload image.";
+    $error_message = "Failed to upload images.";
     logError($error_message);
-    displayError("Failed to upload image. Please try again.");
+    displayError("Failed to upload images. Please try again.");
 }
 
 $conn->close();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,3 +57,4 @@ $conn->close();
     <a href="index.php">Back to Admin</a>
 </body>
 </html>
+

@@ -20,15 +20,18 @@ if (!isAuthenticated()) {
     <h2>Add New Portfolio Item</h2>
     <form action="add.php" method="post" enctype="multipart/form-data">
         <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required>
-        
+        <input type="text" name="title" id="title" required>
+    
         <label for="description">Description:</label>
-        <textarea id="description" name="description" required></textarea>
-        
-        <label for="image">Image:</label>
-        <input type="file" id="image" name="image" required>
-        
-        <button type="submit">Add Item</button>
+        <textarea name="description" id="description" required></textarea>
+    
+        <label for="image">Main Image:</label>
+        <input type="file" name="image" id="image" required>
+    
+        <label for="back_image">Background Image:</label>
+        <input type="file" name="back_image" id="back_image" required>
+    
+        <button type="submit">Submit</button>
     </form>
     <a href="logout.php">Logout</a>
 </div>
