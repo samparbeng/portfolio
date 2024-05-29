@@ -15,6 +15,7 @@ if (!isAuthenticated()) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div>
     <h2>Add New Portfolio Item</h2>
     <form action="add.php" method="post" enctype="multipart/form-data">
