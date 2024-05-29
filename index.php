@@ -74,7 +74,7 @@ $conn->close();
                             <p class="elem-text">Years of Success</p>
                         </div>
                         <div class="elem elem-2">
-                            <p class="elem-title">55+</p>
+                            <p class="elem-title">100+</p>
                             <p class="elem-text">Projects Completed</p>
                         </div>
                         <div class="elem elem-3">
