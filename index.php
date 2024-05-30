@@ -33,24 +33,10 @@ $conn->close();
     <title>Samuel A. - Full Stack Developer</title>
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        .social-links {
-            display: flex;
-            justify-content: center; /* Center the links horizontally */
-            gap: 10px; /* Space between the links */
-        }
-        .social-links a {
-            text-decoration: none; /* Remove underline from links */
-            color: inherit; /* Keep the original color of the icons */
-            font-size: 24px; /* Adjust the icon size if needed */
-        }
-    </style>
 </head>
 
 <body id="top">
@@ -123,12 +109,22 @@ $conn->close();
                         <div class="abs-icon abs-icon-2">
                             <ion-icon name="logo-javascript"></ion-icon>
                         </div>
+                        <div class="abs-icon abs-icon-4">
+                        <img src="./assets/ionic/logo-python-color.png"></img>
+                        </div>
+                        <div class="abs-icon abs-icon-5">
+                            <ion-icon name="logo-html5"></ion-icon>
+                        </div>
+                        <div class="abs-icon abs-icon-6">
+                            <ion-icon name="logo-docker"></ion-icon>
+                        </div>
+
                         <div class="abs-icon abs-icon-3">
                             <ion-icon name="logo-angular"></ion-icon>
                         </div>
                     </figure>
                             <div class="about-content">
-                                <p class="section-subtitle">I'm a Developer</p>
+                                <p class="section-subtitle">I'm a Full Stack Developer</p>
                                 <h2 class="h2 section-title">I Develop Applications that Help People</h2>
                                 <p class="section-text">Highly skilled computer hardware specialist with 16 years of
                                     comprehensive experience,
@@ -139,7 +135,7 @@ $conn->close();
                                     designing and implementing scalable solutions and optimizing hardware performance.
                                     Adept at working in fast-paced environments and collaborating with cross-functional
                                     teams to deliver robust technical solutions.</p>
-                                <a href="#portfolio" class="btn btn-primary blue">View Portfolio</a>
+                                <p>
                                 <div class="social-links">
                                     <a href="https://github.com/samparbeng" target="_blank" title="GitHub"><i
                                             class="fab fa-github"></i></a>
@@ -150,6 +146,8 @@ $conn->close();
                                     <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><i
                                             class="fab fa-twitter"></i></a>
                                 </div>
+                                </p>
+                                <a href="#portfolio" class="btn btn-primary blue">View Portfolio</a>
                             </div>
                         </div>
             </section>
@@ -163,26 +161,26 @@ $conn->close();
                         <?php foreach ($portfolioItems as $item): ?>
                         <li>
                             <a href="portfolio-item.php?id=<?php echo htmlspecialchars($item['id']); ?>" class="portfolio-card"
-                           style="background-image: url('uploads/<?php echo htmlspecialchars($item['back_image']); ?>');">
+                            style="background-image: url('uploads/<?php echo htmlspecialchars($item['back_image']); ?>');">
                             <div class="card-content">
                                 <div class="main-image-container">
                                     <img src="uploads/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="main-image">
                                 </div>
-                                <h3 class="h3 card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
-                                <span class="btn-link">
-                                    <span>View Project</span>
-                                    <ion-icon name="arrow-forward"></ion-icon>
-                                </span>
+                                    <h3 class="h3 card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
+                                    <span class="btn-link">
+                                        <span>View Project</span>
+                                        <ion-icon name="arrow-forward"></ion-icon>
+                                    </span>
                             </div>
                             </a>
                         </li>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <p>No portfolio items found.</p>
-            <?php endif; ?>
-        </ul>
-    </div>
-</section>
+                            <?php endforeach; ?>
+                            <?php else: ?>
+                            <p>No portfolio items found.</p>
+                            <?php endif; ?>
+                     </ul>
+                </div>
+            </section>
 
 
             <section class="section skills" id="skills">

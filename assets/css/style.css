@@ -1088,12 +1088,12 @@ textarea.contact-input {
   }
 
   .abs-img {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     border-radius: inherit;
-    bottom: -150px;
-    left: -100px;
+    bottom: -40px;
+    left: -120px;
   }
 
   .abs-icon {
@@ -1120,21 +1120,23 @@ textarea.contact-input {
     background-color: var(--rufous);
   }
 
-
-
-  /**
-   * PORTFOLIO
-   */
-
-  .portfolio-card .card-subtitle {
-    font-size: var(--fs-5);
+  .abs-icon-4 {
+    top: 80px;
+    right: -40px;
+    background-color: var(--rufous);
   }
 
-  .portfolio-card .btn-link {
-    --fs-6: 1.6rem;
+  .abs-icon-5 {
+    top: 200px;
+    right: -40px;
+    background-color: var(--gold-web-golden);
   }
 
-
+  .abs-icon-6 {
+    top: 320px;
+    right: -40px;
+    background-color: var(--gold-web-golden);
+  }
 
   /**
    * SKILLS
@@ -1207,6 +1209,20 @@ textarea.contact-input {
 }
 
 /* Existing styles for .portfolio-card */
+
+/**
+   * PORTFOLIO
+   */
+
+.portfolio-card .card-subtitle {
+  font-size: var(--fs-5);
+}
+
+.portfolio-card .btn-link {
+  --fs-6: 1.6rem;
+}
+
+
 .portfolio-card {
   position: relative;
   display: block;
@@ -1240,4 +1256,16 @@ textarea.contact-input {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
 }
