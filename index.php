@@ -69,7 +69,7 @@ $conn->close();
                 <div class="container">
                     <div class="hero-banner">
                         <img src="./assets/images/work-setup.jpg" width="640" height="640" loading="lazy"
-                            alt="Ethan's Photo" class="img-cover">
+                            alt="Sam's Photo" class="img-cover">
                         <div class="elem elem-1">
                             <p class="elem-title">12</p>
                             <p class="elem-text">Years of Success</p>
@@ -100,9 +100,9 @@ $conn->close();
                 <div class="container">
                     <figure class="about-banner">
                         <img src="./assets/images/absolute-image0.jpg" width="1000" height="752" loading="lazy"
-                            alt="Ethan's Photo" class="img-cover">
+                            alt="Sam's Photo" class="img-cover">
                         <img src="./assets/images/absolute-image.jpg" width="800" height="717" loading="lazy"
-                            alt="Ethan's Photo" class="abs-img">
+                            alt="Sam's Photo" class="abs-img">
                         <div class="abs-icon abs-icon-1">
                             <ion-icon name="logo-css3"></ion-icon>
                         </div>
@@ -117,15 +117,17 @@ $conn->close();
                         </div>
                         <div class="abs-icon abs-icon-6">
                             <ion-icon name="logo-docker"></ion-icon>
-                        </div>
-
+                        </div>                    
                         <div class="abs-icon abs-icon-3">
                             <ion-icon name="logo-angular"></ion-icon>
                         </div>
+                        <div class="abs-icon abs-icon-7">
+                            <ion-icon name="logo-docker"></ion-icon>
+                        </div>
+
                     </figure>
                             <div class="about-content">
-                                <p class="section-subtitle">I'm a Full Stack Developer</p>
-                                <h2 class="h2 section-title">I Develop Applications that Help People</h2>
+                                <h2 class="h2 section-title">I develop intuitive and impactful applications to improve everyday experiences.</h2>
                                 <p class="section-text">Highly skilled computer hardware specialist with 16 years of
                                     comprehensive experience,
                                     6 years experience in full-stack engineering. Expertise in hardware troubleshooting
@@ -154,82 +156,124 @@ $conn->close();
             <section class="section portfolio" id="portfolio">
                 <div class="container">
                     <p class="section-subtitle">Portfolio</p>
-                     <h2 class="h2 section-title">My Amazing Works</h2>
-                        <p class="section-text">Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate</p>
+                     <h2 class="h2 section-title">My Works</h2>
+                        <p class="section-text">
+Welcome to 'My Amazing Works,' where I showcase my passion and skills in full stack development. Each project highlights my ability to create effective and user-friendly applications that address real-world needs. From dynamic websites to powerful back-end systems, my work reflects a dedication to quality and innovation. Take a look and see how I turn ideas into functional, impactful solutions.</p>
                         <ul class="portfolio-list">
                         <?php if (!empty($portfolioItems)): ?>
                         <?php foreach ($portfolioItems as $item): ?>
-                        <li>
-                            <a href="portfolio-item.php?id=<?php echo htmlspecialchars($item['id']); ?>" class="portfolio-card"
-                            style="background-image: url('uploads/<?php echo htmlspecialchars($item['back_image']); ?>');">
-                            <div class="card-content">
-                                <div class="main-image-container">
-                                    <img src="uploads/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="main-image">
-                                </div>
+                            <li>
+                                <a href="#" class="portfolio-card" data-id="<?php echo htmlspecialchars($item['id']); ?>" style="background-image: url('uploads/<?php echo htmlspecialchars($item['back_image']); ?>');">
+                                <div class="card-content">
+                                    <div class="main-image-container">
+                                        <img src="uploads/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="main-image">
+                                    </div>
                                     <h3 class="h3 card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
-                                    <span class="btn-link">
-                                        <span>View Project</span>
-                                        <ion-icon name="arrow-forward"></ion-icon>
-                                    </span>
-                            </div>
-                            </a>
-                        </li>
-                            <?php endforeach; ?>
-                            <?php else: ?>
-                            <p>No portfolio items found.</p>
-                            <?php endif; ?>
-                     </ul>
+                                        <span class="btn-link">
+                                            <span>View Project</span>
+                                            <ion-icon name="arrow-forward"></ion-icon>
+                                        </span>
+                                </div>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                        <?php else: ?>
+                        <p>No portfolio items found.</p>
+                        <?php endif; ?>
+                        </ul>
                 </div>
             </section>
-
-
+            
             <section class="section skills" id="skills">
-                <div class="container">
-                    <p class="section-subtitle">My Skills</p>
-                    <h2 class="h2 section-title">I Develop Skills Regularly</h2>
-                    <p class="section-text">Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit
-                        in voluptate</p>
-                    <ul class="skills-list">
-                        <li class="skills-item">
-                            <div class="wrapper" style="width: 95%">
-                                <h3 class="skills-title">CSS</h3>
-                                <data class="skills-data" value="95">95%</data>
-                            </div>
-                            <div class="skills-progress-box">
-                                <div class="skills-progress" style="width: 95%"></div>
-                            </div>
-                        </li>
-                        <li class="skills-item">
-                            <div class="wrapper" style="width: 75%">
-                                <h3 class="skills-title">JavaScript</h3>
-                                <data class="skills-data" value="75">75%</data>
-                            </div>
-                            <div class="skills-progress-box">
-                                <div class="skills-progress" style="width: 75%"></div>
-                            </div>
-                        </li>
-                        <li class="skills-item">
-                            <div class="wrapper" style="width: 80%">
-                                <h3 class="skills-title">Angular</h3>
-                                <data class="skills-data" value="80">80%</data>
-                            </div>
-                            <div class="skills-progress-box">
-                                <div class="skills-progress" style="width: 80%"></div>
-                            </div>
-                        </li>
-                        <li class="skills-item">
-                            <div class="wrapper" style="width: 90%">
-                                <h3 class="skills-title">HTML</h3>
-                                <data class="skills-data" value="90">90%</data>
-                            </div>
-                            <div class="skills-progress-box">
-                                <div class="skills-progress" style="width: 90%"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+        <div class="container">
 
+          <p class="section-subtitle">My Skills</p>
+
+          <h2 class="h2 section-title">I Develop Skills Regularly</h2>
+
+          <p class="section-text">
+            Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate
+          </p>
+
+          <ul class="skills-list">
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class=" skills-title">CSS</h3>
+
+                <data class="skills-data" value="95">95%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 95%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 75%">
+                <h3 class="skills-title">React</h3>
+
+                <data class="skills-data" value="75">75%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 75%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 90%">
+                <h3 class="skills-title">MongoDB</h3>
+
+                <data class="skills-data" value="90">90%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 90%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 70%">
+                <h3 class="skills-title">Python</h3>
+
+                <data class="skills-data" value="70">70%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 80%">
+                <h3 class="skills-title">PHP</h3>
+
+                <data class="skills-data" value="80">80%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 80%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 75%">
+                <h3 class="skills-title">JavaScript</h3>
+
+                <data class="skills-data" value="75">75%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 75%"></div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> 
+            
             <section class="section contact" id="contact">
                 <div class="container">
                     <div class="contact-card">
@@ -255,44 +299,29 @@ $conn->close();
                                             East Keswick Rd, Philadelphia,PA 19154 US
                                         </address>
                                     </div>
-
                                 </li>
-
                                 <li class="contact-item">
-
                                     <div class="contact-icon">
                                         <ion-icon name="mail"></ion-icon>
                                     </div>
-
                                     <div>
                                         <h3 class="contact-item-title">Email</h3>
-
                                         <a href="mailto:kojoamparbeng@gmail.com"
                                             class="contact-item-link">kojoamparbeng@gmail.com</a>
                                     </div>
-
                                 </li>
-
                                 <li class="contact-item">
-
                                     <div class="contact-icon">
                                         <ion-icon name="call"></ion-icon>
                                     </div>
-
                                     <div>
                                         <h3 class="contact-item-title">Phone</h3>
-
                                         <a href="tel:+12676600965" class="contact-item-link">+1 (267) 660-0965</a>
                                     </div>
-
                                 </li>
-
                             </ul>
-
                         </div>
-
                     </div>
-
                 </div>
             </section>
 
@@ -300,8 +329,7 @@ $conn->close();
                 <div class="container">
                     <p class="section-subtitle">Latest Blog</p>
                     <h2 class="h2 section-title">Read My Blog & Tips</h2>
-                    <p class="section-text">Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit
-                        in voluptate</p>
+                    <p class="section-text"></p>
                     <ul class="blog-list">
                         <!-- Blog items will go here -->
                     </ul>
@@ -332,6 +360,100 @@ $conn->close();
     <script src="./assets/js/script.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+
+<!-- Modal Structure -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="" class="modal-image">
+        <p id="modalDescription"></p>
+    </div>
+</div>
+
+<!-- Styles for Modal -->
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .modal-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("projectModal");
+    var modalTitle = document.getElementById("modalTitle");
+    var modalImage = document.getElementById("modalImage");
+    var modalDescription = document.getElementById("modalDescription");
+    var span = document.getElementsByClassName("close")[0];
+
+    function fetchProjectDetails(id) {
+        fetch('get_project_details.php?id=' + id)
+            .then(response => response.json())
+            .then(data => {
+                modalTitle.textContent = data.title;
+                modalImage.src = 'uploads/' + data.image;
+                modalDescription.textContent = data.description;
+                modal.style.display = "block";
+            })
+            .catch(error => {
+                console.error('Error fetching project details:', error);
+            });
+    }
+
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+        card.addEventListener('click', function(event) {
+            event.preventDefault();
+            var id = this.getAttribute('data-id');
+            fetchProjectDetails(id);
+        });
+    });
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+</script>
+
+
 </body>
 
 </html>

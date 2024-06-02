@@ -1138,6 +1138,12 @@ textarea.contact-input {
     background-color: var(--gold-web-golden);
   }
 
+  .abs-icon-7 {
+    bottom: -40px;
+    right: 280px;
+    background-color: var(--cadet-blue-crayola);
+  }
+
   /**
    * SKILLS
    */
@@ -1261,7 +1267,7 @@ textarea.contact-input {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .social-links a {
