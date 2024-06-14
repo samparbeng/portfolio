@@ -1,6 +1,7 @@
 <?php
 // admin/index.php
 include '../config.php';
+include '../includes/error_handling.php';
 
 if (!isAuthenticated()) {
     header('Location: login.php');
@@ -30,6 +31,7 @@ if (!isAuthenticated()) {
         <button type="submit">Submit</button>
     </form>
     <a href="logout.php">Logout</a>
+    <a href="viewpi.php">View Portfolio Table</a>
 </div>
 </body>
 </html>

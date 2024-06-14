@@ -57,7 +57,7 @@ $conn->close();
                     <li><a href="#skills" class="navbar-link" data-nav-link>Skills</a></li>
                     <li><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
                     <li><a href="#blog" class="navbar-link" data-nav-link>Blog</a></li>
-                    <li><a href="#" class="btn btn-primary">Download Resume</a></li>
+                    <li><a href="#" class="btn btn-primary"><button id="downloadBtn">Download Resume</button></a></li>
                 </ul>
             </nav>
         </div>
@@ -451,6 +451,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+</script>
+<script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            window.location.href = 'download.php';
+        });
 </script>
 
 
